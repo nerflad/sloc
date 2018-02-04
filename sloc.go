@@ -39,6 +39,7 @@ var languages = []Language{
 
     Language{"Shell", mExt(".sh"), shComments},
     Language{"Bash", mExt(".bash"), shComments},
+    Language{"Batchfile", mExt(".bat"), batchComments},
     Language{"R", mExt(".r", ".R"), shComments},
     Language{"Tcl", mExt(".tcl"), shComments},
 
@@ -60,6 +61,7 @@ var languages = []Language{
     Language{"SASS", mExt(".sass"), cssComments},
     Language{"SCSS", mExt(".scss"), cssComments},
 
+    Language{"Mustache", mExt(".mustache"), xmlComments},
     Language{"HTML", mExt(".htm", ".html", ".xhtml"), xmlComments},
     Language{"XML", mExt(".xml"), xmlComments},
     Language{"CSS", mExt(".css"), cssComments},
@@ -77,6 +79,7 @@ type Commenter struct {
 }
 
 var (
+    batchComments  = Commenter{`::`, "\000", "\000", false}
     noComments     = Commenter{"\000", "\000", "\000", false}
     xmlComments    = Commenter{"\000", `<!--`, `-->`, false}
     cComments      = Commenter{`//`, `/*`, `*/`, false}
