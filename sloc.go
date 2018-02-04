@@ -80,21 +80,21 @@ type Commenter struct {
 
 var (
     batchComments  = Commenter{`::`, "\000", "\000", false}
-    noComments     = Commenter{"\000", "\000", "\000", false}
-    xmlComments    = Commenter{"\000", `<!--`, `-->`, false}
     cComments      = Commenter{`//`, `/*`, `*/`, false}
-    cssComments    = Commenter{"\000", `/*`, `*/`, false}
-    shComments     = Commenter{`#`, "\000", "\000", false}
-    semiComments   = Commenter{`;`, "\000", "\000", false}
-    hsComments     = Commenter{`--`, `{-`, `-}`, true}
-    mlComments     = Commenter{`\000`, `(*`, `*)`, false}
-    sqlComments    = Commenter{`--`, `/*`, `*/`, false}
-    luaComments    = Commenter{`--`, `--[[`, `]]`, false}
-    pyComments     = Commenter{`#`, `"""`, `"""`, false}
-    matlabComments = Commenter{`%`, `%{`, `%}`, false}
-    erlangComments = Commenter{`%`, "\000", "\000", false}
-    rubyComments   = Commenter{`#`, "=begin", "=end", false}
     coffeeComments = Commenter{`#`, "###", "###", false}
+    cssComments    = Commenter{"\000", `/*`, `*/`, false}
+    erlangComments = Commenter{`%`, "\000", "\000", false}
+    hsComments     = Commenter{`--`, `{-`, `-}`, true}
+    luaComments    = Commenter{`--`, `--[[`, `]]`, false}
+    matlabComments = Commenter{`%`, `%{`, `%}`, false}
+    mlComments     = Commenter{`\000`, `(*`, `*)`, false}
+    noComments     = Commenter{"\000", "\000", "\000", false}
+    pyComments     = Commenter{`#`, `"""`, `"""`, false}
+    rubyComments   = Commenter{`#`, "=begin", "=end", false}
+    semiComments   = Commenter{`;`, "\000", "\000", false}
+    shComments     = Commenter{`#`, "\000", "\000", false}
+    sqlComments    = Commenter{`--`, `/*`, `*/`, false}
+    xmlComments    = Commenter{"\000", `<!--`, `-->`, false}
 
     // TODO support POD and __END__
     perlComments = Commenter{`#`, "\000", "\000", false}
